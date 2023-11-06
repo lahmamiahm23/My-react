@@ -1,5 +1,7 @@
 module.exports = {
   content: [
+    "./src/**/*.html",
+    "./src/**/*.js",
     "./src/**/*.{js,jsx,ts,tsx}",
     "./public/index.html",
   ],
@@ -14,6 +16,9 @@ module.exports = {
       container: {
         center: true,
         padding: '2rem',
+        maxWidth: {
+          default: '800px'
+        }
       },
       backgroundImage: {
         'body': "url('wp10766809-simple-colors-wallpapers.jpg')",
@@ -38,15 +43,15 @@ module.exports = {
           '200': '#f1f5f5',
         },
       },
-      inset: {
-        '190': '190px',
-        '2': '2px',
-      },
-      img: {
-        '190': '190px',
-        '2': '2px',
-      },
+    },
+  },
+  variants: {
+    extend: {
+      textColor: ['hover', 'focus'],
+      margin: ['responsive', 'hover', 'focus'],
+      padding: ['responsive', 'hover'],
     },
   },
   plugins: [],
 }
+
